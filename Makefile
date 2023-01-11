@@ -6,7 +6,7 @@
 #    By: smclacke <smclacke@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/13 20:26:36 by smclacke      #+#    #+#                  #
-#    Updated: 2023/01/08 18:58:26 by smclacke      ########   odam.nl          #
+#    Updated: 2023/01/11 16:18:58 by smclacke      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,7 +73,7 @@ GNL		=	get_next_line.c		\
 			get_next_line_utils.c\
 
 SRC_DIR	:=	src/
-SRCS :=$(addprefix $(LIBFT_DIR),$(LIBFT))
+SRCS +=$(addprefix $(LIBFT_DIR),$(LIBFT))
 SRCS +=$(addprefix $(PRINTF_DIR),$(PRINTF))
 SRCS +=$(addprefix $(GNL_DIR),$(GNL))
 
