@@ -6,7 +6,7 @@
 /*   By: smclacke <smclacke@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 19:21:06 by smclacke      #+#    #+#                 */
-/*   Updated: 2023/01/08 17:23:18 by smclacke      ########   odam.nl         */
+/*   Updated: 2023/03/01 16:25:12 by smclacke      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,10 @@ int		ft_isascii(int c);
 int		ft_isdigit(int c);
 
 int		ft_isprint(int c);
+
+int		ft_isspace(int c);
+
+int		ft_ishex(int c);
 
 char	*ft_strchr(const char *s, int c);
 

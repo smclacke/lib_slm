@@ -6,7 +6,7 @@
 #    By: smclacke <smclacke@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/13 20:26:36 by smclacke      #+#    #+#                  #
-#    Updated: 2023/01/11 16:18:58 by smclacke      ########   odam.nl          #
+#    Updated: 2023/03/01 16:25:27 by smclacke      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,8 @@ LIBFT	=	ft_isalpha.c	\
     ft_isascii.c	\
     ft_isdigit.c	\
     ft_isprint.c	\
+	ft_isspace.c	\
+	ft_ishex.c		\
     ft_strchr.c		\
     ft_strrchr.c	\
     ft_strlen.c		\
