@@ -6,7 +6,7 @@
 #    By: smclacke <smclacke@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/13 20:26:36 by smclacke      #+#    #+#                  #
-#    Updated: 2023/03/01 16:25:27 by smclacke      ########   odam.nl          #
+#    Updated: 2023/03/01 19:23:43 by smclacke      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,7 @@ LIBFT	=	ft_isalpha.c	\
     ft_substr.c		\
     ft_striteri.c	\
     ft_strtrim.c	\
+	ft_strcmp.c		\
     ft_strmapi.c	\
     ft_itoa.c		\
     ft_split.c		\
