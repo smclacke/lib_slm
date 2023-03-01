@@ -6,7 +6,7 @@
 /*   By: smclacke <smclacke@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 19:21:06 by smclacke      #+#    #+#                 */
-/*   Updated: 2023/03/01 16:25:12 by smclacke      ########   odam.nl         */
+/*   Updated: 2023/03/01 19:24:32 by smclacke      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,8 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 
 char	*ft_strjoin(char const *s1, char const *s2);
+
+int		ft_strcmp(const char *s1, const char *s2);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
