@@ -6,7 +6,7 @@
 #    By: smclacke <smclacke@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/13 20:26:36 by smclacke      #+#    #+#                  #
-#    Updated: 2023/03/01 19:23:43 by smclacke      ########   odam.nl          #
+#    Updated: 2023/03/03 16:27:10 by smclacke      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ LIBFT	=	ft_isalpha.c	\
     ft_strlcat.c	\
     ft_strlcpy.c	\
     ft_atoi.c		\
+	ft_atof.c		\
     ft_bzero.c		\
     ft_memset.c		\
     ft_memcpy.c		\

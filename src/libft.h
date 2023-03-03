@@ -6,7 +6,7 @@
 /*   By: smclacke <smclacke@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 19:21:06 by smclacke      #+#    #+#                 */
-/*   Updated: 2023/03/01 19:24:32 by smclacke      ########   odam.nl         */
+/*   Updated: 2023/03/03 16:27:38 by smclacke      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
 //--------------- libft -----------------------//
 
 int		ft_atoi(const char *str);
+
+double	ft_atof(char *str);
 
 char	*ft_itoa(int n);
 
