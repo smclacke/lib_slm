@@ -6,13 +6,11 @@
 /*   By: smclacke <smclacke@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/03 16:21:46 by smclacke      #+#    #+#                 */
-/*   Updated: 2023/03/03 16:33:32 by smclacke      ########   odam.nl         */
+/*   Updated: 2023/03/03 16:40:24 by smclacke      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	check_hex(char *str, int *neg)
 {
@@ -58,8 +56,3 @@ double	ft_atof(char *str)
 		return (0);
 	return (n * neg);
 }
-
-// int	main()
-// {
-// 	printf("%f\n", ft_atof("34656"));
-// }
