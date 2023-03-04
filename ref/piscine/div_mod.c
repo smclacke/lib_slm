@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_putstr_fd.c                                     :+:    :+:            */
+/*   div_mod.c                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: smclacke <smclacke@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/19 14:06:07 by smclacke      #+#    #+#                 */
-/*   Updated: 2023/03/04 15:26:42 by smclacke      ########   odam.nl         */
+/*   Created: 2023/03/04 15:25:21 by smclacke      #+#    #+#                 */
+/*   Updated: 2023/03/04 15:44:35 by smclacke      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include <unistd.h>
 
-void	ft_putstr_fd(char *s, int fd)
+void	div_mod(int a, int b, int *div, int *mod)
 {
-	write(fd, s, ft_strlen(s));
+	if (b != 0)
+	{
+		*div = a / b;
+		*mod = a % b;
+	}
 }
 
-// void	putstr(char *str)
-// {
-// 	int	i;
+int	main()
+{
+	int	a = 50;
+	int	b = 2;
+	int	*div = &a;
+	int	*mod = &b;
 
-// 	i = 0;
-// 	while (str[i])
-// 	{
-// 		write(1, &str[i], 1);
-// 		i++;
-// 	}
-// }
+	printf("a: %d, b: %d\n", a, b);
+	div_mod(a, b, div, mod);
+	printf("a: %d, b: %d\n", a, b);
+}

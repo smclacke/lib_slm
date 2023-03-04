@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_putstr_fd.c                                     :+:    :+:            */
+/*   fizz_buzz.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: smclacke <smclacke@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/19 14:06:07 by smclacke      #+#    #+#                 */
-/*   Updated: 2023/03/04 15:26:42 by smclacke      ########   odam.nl         */
+/*   Created: 2023/03/04 15:44:06 by smclacke      #+#    #+#                 */
+/*   Updated: 2023/03/04 15:46:47 by smclacke      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include <unistd.h>
 
-void	ft_putstr_fd(char *s, int fd)
+void	numbers(int n)
 {
-	write(fd, s, ft_strlen(s));
+	char	str[10] = "0123456789";
+
+	if (n > 9)
+		numbers(n / 10);
+	write(1, &str[n % 10], 1);
 }
 
-// void	putstr(char *str)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (str[i])
-// 	{
-// 		write(1, &str[i], 1);
-// 		i++;
-// 	}
-// }
+int	main()
+{
+	int	n;
+	
+	n = 1;
+	while (n <= 100)
+	{
+		if (n % 3 == 0 && n % 5 == 0)
+			write(1, "fizzbuzz", 8);
+		else if (n % 5 == 0)
+			write(1, "fizz", 4);
+		else if (n % 3 == 0)
+			write(1, "buzz", 4);
+		else 
+			numbers(n);
+		n++;
+		write(1, "\n", 1);
+	}
+}

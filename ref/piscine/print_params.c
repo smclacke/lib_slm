@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_putstr_fd.c                                     :+:    :+:            */
+/*   print_params.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: smclacke <smclacke@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/19 14:06:07 by smclacke      #+#    #+#                 */
-/*   Updated: 2023/03/04 15:26:42 by smclacke      ########   odam.nl         */
+/*   Created: 2023/03/04 15:32:09 by smclacke      #+#    #+#                 */
+/*   Updated: 2023/03/04 15:45:57 by smclacke      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include <unistd.h>
 
-void	ft_putstr_fd(char *s, int fd)
+int	main(int argc, char *argv[])
 {
-	write(fd, s, ft_strlen(s));
+	int	i;
+	int	j;
+
+	j = 1;
+	while (j < argc)
+	{
+		i = 0;
+		while (argv[j][i])
+		{
+			write(1, &argv[j][i], 1);
+			i++;
+		}
+		write(1, " ", 1);
+		j++;
+	}
+	return (0);
 }
-
-// void	putstr(char *str)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (str[i])
-// 	{
-// 		write(1, &str[i], 1);
-// 		i++;
-// 	}
-// }
