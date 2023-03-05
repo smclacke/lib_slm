@@ -6,16 +6,14 @@
 #    By: smclacke <smclacke@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/13 20:26:36 by smclacke      #+#    #+#                  #
-#    Updated: 2023/03/04 15:42:38 by smclacke      ########   odam.nl          #
+#    Updated: 2023/03/05 21:54:48 by smclacke      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	libft.a
 
-HEADER	=	src/
-
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I
+CFLAGS = -Wall -Wextra -Werror -Iinclude/
 ARCHIVE = ar -rcs
 RM = rm -f
 
@@ -94,8 +92,8 @@ $(NAME): $(OBJ_DIR) $(OBJP)
 	@$(ARCHIVE) $(NAME) $(OBJP)
 	@ echo "Made!"
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(HEADER)
-	@$(CC) $(CFLAGS) $(HEADER) -c -o $@ $<
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c
+	@$(CC) $(CFLAGS) -c -o $@ $<
 
 $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)	
