@@ -6,7 +6,7 @@
 /*   By: smclacke <smclacke@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/10 13:57:26 by smclacke      #+#    #+#                 */
-/*   Updated: 2023/03/10 15:02:17 by smclacke      ########   odam.nl         */
+/*   Updated: 2023/03/10 15:32:58 by smclacke      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,3 +95,5 @@ int	main(void)
 	free(line);
 	line = NULL;
 }
+
+// find test.sh file from exam question to test + other main.. confused!
