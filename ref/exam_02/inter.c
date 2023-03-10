@@ -9,7 +9,7 @@ void	ft_inter(char *s1, char *s2)
 
 	while (s1[++i])
 	{
-		j = - 1;
+		j = -1;
 		while (s2[++j])
 		{
 			if (tmp[(int)s1[i]] != 1 && (s1[i] == s2[j]))
