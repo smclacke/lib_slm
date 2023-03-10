@@ -31,12 +31,12 @@ int	main(int argc, char **argv)
 
 // "nothing" "this sentence hides nothing" | cat -e
 
-// nothig 
+// RETURN: nothig 
 
 // ddf6vewg64f gtwthgdwthdwfteewhrtag6h4ffdhsd | cat -e
 
-// df6ewg4
+// RETURN: df6ewg4
 
 // "padinton" "paqefwtdjetyiytjneytjoeyjnejeyj" | cat -e
 
-// padinto
+// RETURN: padinto
