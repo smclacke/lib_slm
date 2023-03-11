@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   libft.h                                            :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: smclacke <smclacke@student.codam.nl>         +#+                     */
+/*   By: SarahLouise <SarahLouise@student.42.fr>      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 19:21:06 by smclacke      #+#    #+#                 */
-/*   Updated: 2023/03/04 15:42:50 by smclacke      ########   odam.nl         */
+/*   Updated: 2023/03/11 16:13:31 by smclacke      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@
 # include <stdlib.h>
 # include <string.h>
 # include <sys/queue.h>
+# include <stdarg.h>
+# include <limits.h>
+# include <fcntl.h>
 
 //--------------- libft -----------------------//
 
 int		ft_atoi(const char *str);
-
-double	ft_atof(char *str);
 
 char	*ft_itoa(int n);
 
@@ -36,10 +37,6 @@ int		ft_isascii(int c);
 int		ft_isdigit(int c);
 
 int		ft_isprint(int c);
-
-int		ft_isspace(int c);
-
-int		ft_ishex(int c);
 
 char	*ft_strchr(const char *s, int c);
 
@@ -85,8 +82,6 @@ void	ft_putstr_fd(char *s, int fd);
 
 char	*ft_strjoin(char const *s1, char const *s2);
 
-int		ft_strcmp(const char *s1, const char *s2);
-
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
@@ -124,5 +119,14 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
+//--------------- Extra ------------------//
+
+int		ft_strcmp(const char *s1, const char *s2);
+
+int		ft_isspace(int c);
+
+int		ft_ishex(int c);
+
+double	ft_atof(const char *str);
 
 #endif

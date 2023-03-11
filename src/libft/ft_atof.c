@@ -6,53 +6,53 @@
 /*   By: smclacke <smclacke@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/03 16:21:46 by smclacke      #+#    #+#                 */
-/*   Updated: 2023/03/03 16:40:24 by smclacke      ########   odam.nl         */
+/*   Updated: 2023/03/11 16:26:12 by smclacke      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_hex(char *str, int *neg)
+int	check_sign(const char *str)
 {
 	int	i;
+	int	sign;
 
 	i = 0;
-	while (ft_isspace(str[i]))
-		i++;
+	sign = 1;
 	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
-			*neg *= -1;
-		i++;
+			sign *= -1;
 	}
-	return (i);
+	return (sign);
 }
 
-double	ft_atof(char *str)
+double	ft_atof(const char *str)
 {
 	int		i;
-	double	n;
-	int		neg;
-	double	div;
+	int		sign;
+	double	result;
+	double	decimal;
 
-	n = 0;
-	div = 0.1;
-	neg = 1;
-	i = check_hex(str, &neg);
-	while (str[i] && ft_isdigit(str[i] && str[i] != '.'))
+	if (!str)
+		return (0);
+	i = 0;
+	result = 0.0;
+	decimal = 1.0;
+	if (str[i])
 	{
-		n = (n * 10) + (str[i] - '0');
+		sign = check_sign(str);
 		i++;
 	}
+	while (str[i] >= '0' && str[i] <= '9')
+		result = result * 10 + (str[i++] - '0');
 	if (str[i] == '.')
 		i++;
-	while (str[i] && ft_isdigit(str[i]))
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		n = n + ((str[i] - '0') * div);
-		div *= 0.1;
-		i++;
+		result = result * 10 + (str[i++] - '0');
+		decimal *= 10;
 	}
-	if (str[i] && !ft_isdigit(str[i]))
-		return (0);
-	return (n * neg);
+	return (sign * result / decimal);
 }
+
